@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers for You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff4081;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+        .flower {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            animation: bloom 2s infinite alternate;
+        }
+        .petal {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            transform-origin: 50% 0;
+        }
+        .petal:nth-child(1) { transform: rotate(0deg); }
+        .petal:nth-child(2) { transform: rotate(60deg); }
+        .petal:nth-child(3) { transform: rotate(120deg); }
+        .petal:nth-child(4) { transform: rotate(180deg); }
+        .petal:nth-child(5) { transform: rotate(240deg); }
+        .petal:nth-child(6) { transform: rotate(300deg); }
+
+        .center {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        @keyframes bloom {
+            from { transform: scale(0.8); }
+            to { transform: scale(1.1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>I Love You 🌸</h1>
+
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+    </div>
+
+</body>
+</html>
